@@ -3,13 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "echarts": "^5.0.0",
+    "element-plus": "^1.0.1-beta.26",
+    "element-ui": "^2.14.1",
+    "jquery": "^3.5.1",
     "vue": "^3.0.0",
+    "vue-axios": "^3.2.4",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
   },
@@ -27,12 +33,14 @@
     "eslint-plugin-vue": "^7.0.0-0",
     "prettier": "^1.19.1",
     "sass": "^1.26.5",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "webpack-dev-server": "^3.11.1"
   },
   "eslintConfig": {
     "root": true,
     "env": {
-      "node": true
+      "node": true,
+      "jquery": true
     },
     "extends": [
       "plugin:vue/vue3-essential",
@@ -48,5 +56,6 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "dev": "vue-cli-service serve && webpack-dev-server --open"
 }
